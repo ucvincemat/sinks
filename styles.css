@@ -44,6 +44,20 @@ p {
     display: block;
 }
 
+.container {
+    width: clamp(500px, 24vmin, 600px);
+    height: 1000px;
+    background-color: #aaa;
+    margin: 1.4vmin;
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+}
+
+img {
+    width: 75%
+}
+
 .sidenav a:hover {
     color: #f1f1f1;
 }
@@ -51,4 +65,12 @@ p {
 .main {
     margin-left: 160px;
     padding: 0px 10px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
 }
