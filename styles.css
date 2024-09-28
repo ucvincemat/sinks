@@ -1,16 +1,22 @@
 body {
     font-family: Tahoma, sans-serif;
-    font-size: clamp(12px, 1vw, 3rem);
+    font-size: clamp(24px, 1vw, 50px);
 }
 
 #main {
     margin-left: 18vmin;
 }
 
-header {
+header, footer {
     background-color: #ccc;
     text-align: center;
     padding: 0.5em;
+}
+
+footer {
+    position: relative;
+    width: 99%;
+    bottom: 0;
 }
 
 h1 {
@@ -20,8 +26,20 @@ h1 {
     margin-top: 0px;
 }
 
+h2 {
+    margin-bottom: 0.3em;
+    font-family: cursive, Times, sans-serif;
+    font-weight: 1000;
+    font-size: clamp(24px, 1.9vw, 5rem)
+}
+
 p {
     margin: 5px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #000;
 }
 
 .sidenav {
@@ -45,17 +63,28 @@ p {
 }
 
 .container {
-    width: clamp(500px, 24vmin, 600px);
-    height: 1000px;
+    width: clamp(600px, 30vmin, 1000px);
+    height: clamp(1000px, 69vmin, 1900px);
     background-color: #aaa;
     margin: 1.4vmin;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     flex-grow: 0;
+    padding: 2vw;
+    border: 0.5em ridge;
+    align-self: stretch;
 }
 
 img {
-    width: 75%
+    width: 100%;
+    height: clamp(600px, 30vmin, 1000px);
+    object-fit: cover;
+}
+
+.centerme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidenav a:hover {
@@ -73,4 +102,18 @@ img {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        font-size: clamp(16px, 1vw, 45px);
+    }
+    
+    img {
+        height: 90vmin;
+    }
+
+    .container {
+        height: fit-content;
+    }
 }
